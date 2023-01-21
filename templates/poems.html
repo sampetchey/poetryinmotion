@@ -1,8 +1,6 @@
 {% extends "base.html" %} 
 {% block content %}
 
-    <h2>I am extending the base template</h2>
-
     {% for poem in poems %}
         {{ poem.poem_title }}<br>
         {{ poem.poem_text }}<br>
