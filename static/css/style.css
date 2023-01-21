@@ -7,6 +7,6 @@
     letter-spacing: 2px;
 }
 
-.input-field {
-    min-height: 75vh;
+.row {
+    margin: auto;
 }

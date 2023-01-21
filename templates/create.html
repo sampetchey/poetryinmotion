@@ -1,7 +1,7 @@
 {% extends "base.html" %} 
 {% block content %} 
 
-    <h3 class="center-align">Write a poem...</h3>
+    <h4 class="center-align">Write a poem...</h4>
 
     <div class="row">
         <form class="col s12 m8 offset-m2">
@@ -20,12 +20,27 @@
                         <label for="poem_text"><i class="material-icons">create</i></label>
                     </div>
                 </div>
+                <!-- date added and author inputs-->
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="date_added" name="date_added" type="text" class="datepicker validate">
+                        <label for="date_added">Date written</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="poem_author" name="poem_author" type="text" class="validate">
+                        <label for="poem_author">Written by:</label>
+                    </div>
+                </div>
                 <!-- save poem button -->
                 <div class="row">
-                    <input type="text" class="datepicker">
-                    <button type="submit" class="col s12 btn-large grey darken-3 text-shadow">
+                    <button type="submit" class="btn waves-effect waves-light col s5 grey darken-3 text-shadow">
                         Save
                     </button>
+                    <span class="col s2"></span>
+                    <button type="submit" class="btn waves-effect waves-light col s5 grey darken-3 text-shadow">
+                        Delete
+                    </button>
+                    <span class="col s3"></span>
                 </div>
             </div>
         </form>
