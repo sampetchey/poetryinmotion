@@ -1,0 +1,53 @@
+{% extends "base.html" %} 
+{% block content %} 
+
+    <h4 class="center-align">Edit poem...</h4>
+
+    <div class="row">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_poem', poem_id=poem.id) }}">
+            <div class="card-panel">
+                <!-- poem title -->
+                <div class="row">
+                    <div class="input-field col s9">
+                        <input placeholder="My new poem title..." id="poem_title" 
+                            name="poem_title" type="text" class="validate">
+                        <label for="poem_title">Title</label>
+                      </div>
+                </div>
+                <!-- poem text enter field-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="poem_text" name="poem_text" type="text" 
+                            class="materialize-textarea" placeholder="Write your poem here..."></textarea>
+                        <label for="poem_text"><i class="material-icons">create</i></label>
+                    </div>
+                </div>
+                <!-- date added and author inputs-->
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="date_added" name="date_added" type="text" class="datepicker validate">
+                        <label for="date_added">Date written</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="poem_author" name="poem_author" type="text" class="validate">
+                        <label for="poem_author">Written by:</label>
+                    </div>
+                </div>
+                <!-- save poem button -->
+                <div class="row">
+                    <div class="col s6 left">
+                        <button type="submit" class="btn waves-effect waves-light grey darken-3 text-shadow">
+                            Save
+                        </button>
+                    </div class="col s6 right">
+                    <div>
+                        <button type="submit" class="btn waves-effect waves-light grey darken-3 text-shadow">
+                            Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %} 

@@ -32,6 +32,11 @@ def create():
     return render_template("create.html")
 
 
+@app.route("/edit_poem/<poem_id>", methods=["GET", "POST"])
+def edit_poem(poem_id):
+    poem = mongo.db.poems.find_one({"_id": ObjectId(poem_id)})
+    return render_template("edit_poem.html", poem=poem)
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
