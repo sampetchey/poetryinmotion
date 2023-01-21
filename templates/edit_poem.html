@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="input-field col s9">
                         <input placeholder="My new poem title..." id="poem_title" 
-                            name="poem_title" type="text" class="validate">
+                            name="poem_title" value="{{ poem.poem_title }}" type="text" class="validate">
                         <label for="poem_title">Title</label>
                       </div>
                 </div>
@@ -18,32 +18,36 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <textarea id="poem_text" name="poem_text" type="text" 
-                            class="materialize-textarea" placeholder="Write your poem here..."></textarea>
+                            class="materialize-textarea" placeholder="Write your poem here...">
+                        {{- poem.poem_text -}}
+                        </textarea>
                         <label for="poem_text"><i class="material-icons">create</i></label>
                     </div>
                 </div>
                 <!-- date added and author inputs-->
                 <div class="row">
                     <div class="input-field col s6">
-                        <input id="date_added" name="date_added" type="text" class="datepicker validate">
+                        <input id="date_added" name="date_added" value="{{ poem.date_added }}" type="text" class="datepicker validate">
                         <label for="date_added">Date written</label>
                     </div>
                     <div class="input-field col s6">
-                        <input id="poem_author" name="poem_author" type="text" class="validate">
+                        <input id="poem_author" name="poem_author" value="{{ poem.poem_author }}" type="text" class="validate">
                         <label for="poem_author">Written by:</label>
                     </div>
                 </div>
                 <!-- save poem button -->
                 <div class="row">
                     <div class="col s6 left">
+                        <a href="{{ url_for }}"
                         <button type="submit" class="btn waves-effect waves-light grey darken-3 text-shadow">
-                            Save
-                        </button>
+                            Save changes
+                        </button></a>
                     </div class="col s6 right">
                     <div>
+                        <a href="{{ url_for('get_poems') }}"
                         <button type="submit" class="btn waves-effect waves-light grey darken-3 text-shadow">
-                            Delete
-                        </button>
+                            Cancel
+                        </button></a>
                     </div>
                 </div>
             </div>
