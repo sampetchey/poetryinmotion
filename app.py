@@ -20,7 +20,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_poems")
 def get_poems():
-    poems = mongo.db.poems.find()
+    poems = list(mongo.db.poems.find())
     return render_template("poems.html", poems=poems)
 
 @app.route("/create", methods=["GET", "POST"])

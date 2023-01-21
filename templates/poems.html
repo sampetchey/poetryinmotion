@@ -2,35 +2,26 @@
 {% block content %}
 
 <div class="row">
+    {% for poem in poems %}
     <div class="medium col s12 m6 l3 xl2">
-        <div class="card grey darken-2">
-            <div class="card-content white-text">
-                <span class="card-title">Card Title</span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+        <div class="card grey darken-3">
+            <div class="card-content white-text text-shadow">
+                <span class="card-title">{{ poem.poem_title }}</span>
+                <p>{{ poem.poem_text }}</p><br>
+                <p>by {{ poem.poem_author }}</p><br>
+                <p>{{ poem.date_added }}</p>
             </div>
             <div class="card-action">
-                <a href="#">This is a link</a>
-                <a href="#">This is a link</a>
+                <a href="#"><i class="material-icons left white-text tooltipped" 
+                    data-position="bottom" data-tooltip="View poem">open_in_new</i></a>
+                <a href="#"><i class="material-icons right white-text tooltipped" 
+                    data-position="bottom" data-tooltip="Edit poem">create</i></a>
             </div>
         </div>
     </div>
-    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
-    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
-    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
-    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
-    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
-    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
-    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
-    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
-    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
-  </div>
-
-    {% for poem in poems %}
-        {{ poem.poem_title }}<br>
-        {{ poem.poem_text }}<br>
-        {{ poem.date_added }}<br>
-        {{ poem.poem_author }}
     {% endfor %}
+</div>
+
+    
 
 {% endblock %}
