@@ -23,9 +23,14 @@ def get_poems():
     poems = list(mongo.db.poems.find())
     return render_template("poems.html", poems=poems)
 
+
 @app.route("/create", methods=["GET", "POST"])
 def create():
+    if request.method == "POST":
+        mongo.db.poems.insert_one(request.form.to_dict())
+        return redirect(url_for("get_poems"))
     return render_template("create.html")
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
