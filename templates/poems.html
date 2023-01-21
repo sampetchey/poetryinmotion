@@ -1,6 +1,31 @@
 {% extends "base.html" %} 
 {% block content %}
 
+<div class="row">
+    <div class="medium col s12 m6 l3 xl2">
+        <div class="card grey darken-2">
+            <div class="card-content white-text">
+                <span class="card-title">Card Title</span>
+                <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+                <a href="#">This is a link</a>
+                <a href="#">This is a link</a>
+            </div>
+        </div>
+    </div>
+    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
+    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
+    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
+    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
+    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
+    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
+    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
+    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
+    <div class="card medium col s12 m6 l3 xl2"><p>s12 m6 l3</p></div>
+  </div>
+
     {% for poem in poems %}
         {{ poem.poem_title }}<br>
         {{ poem.poem_text }}<br>
