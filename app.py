@@ -23,6 +23,10 @@ def get_poems():
     poems = mongo.db.poems.find()
     return render_template("poems.html", poems=poems)
 
+@app.route("/create", methods=["GET", "POST"])
+def create():
+    return render_template("create.html")
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

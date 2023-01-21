@@ -1,0 +1,34 @@
+{% extends "base.html" %} 
+{% block content %} 
+
+    <h3 class="center-align">Write a poem...</h3>
+
+    <div class="row">
+        <form class="col s12 m8 offset-m2">
+            <div class="card-panel">
+                <!-- poem title -->
+                <div class="row">
+                    <div class="input-field col s9">
+                        <input placeholder="My new poem title..." id="poem_title" name="poem_title" type="text" class="validate">
+                        <label for="poem_title">Title</label>
+                      </div>
+                </div>
+                <!-- poem text enter field-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="poem_text" name="poem_text" type="text" class="materialize-textarea" placeholder="Write your poem here..."></textarea>
+                        <label for="poem_text"><i class="material-icons">create</i></label>
+                    </div>
+                </div>
+                <!-- save poem button -->
+                <div class="row">
+                    <input type="text" class="datepicker">
+                    <button type="submit" class="col s12 btn-large grey darken-3 text-shadow">
+                        Save
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %} 

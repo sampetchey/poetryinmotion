@@ -18,11 +18,11 @@
 <body>
 
     <header>
-        <!-- main header and add poem button -->
+        <!-- main header and create button -->
         <nav class="nav-extended text-shadow grey darken-3">
             <div class="nav-wrapper page-name">
-                <a href="#!" class="brand-logo center">Poetry in Motion</a>
-                <a href="#!" class="right brand-logo"><i class="material-icons">create</i></a>
+                <a href="{{ url_for('get_poems') }}" class="brand-logo center">Poetry in Motion</a>
+                <a href="{{ url_for('create') }}" class="right brand-logo"><i class="material-icons">create</i></a>
             </div>
           </nav>
     </header>
