@@ -1,4 +1,4 @@
-$(document).ready(function(){
+pp$(document).ready(function(){
     $('.datepicker').datepicker();
     $('.tooltipped').tooltip();
   });

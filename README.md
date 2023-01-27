@@ -1,108 +1,239 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Poetry in Motion
 
-Welcome sampetchey,
+<br/>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Table Of Contents
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+- General Information
+- Demo
+- Wireframe Mockups
+- Technologies
+- UI
+- UX
+- Database
+- Accessibility
+- Challenges
+- Features
+- Defensive Design
+- Testing
+- Deployment
+- Credits
 
-## Gitpod Reminders
+<br/>
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## General Information
 
-`python3 -m http.server`
+The idea behind Poetry in Motion is to easily write, share and store poems as they are inspired. Creativity is often promoted by sharing and collaborating. The open nature of this site acts like a forum, with participants able to create, view and edit posts. 
 
-A blue button should appear to click: _Make Public_,
+The key to this site is in its simplicity, using the python language to communicate with a database on MongoDB containing the text. In addition the poem content, the database records the title, date it was written and authorship.
 
-Another blue button should appear to click: _Open Browser_.
+<br/>
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Demo
 
-A blue button should appear to click: _Make Public_,
+A live demo of the website can be found...
 
-Another blue button should appear to click: _Open Browser_.
+<br/>
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Wireframe Mockups
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Technologies
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Languages
 
-------
+- HTML5
+- CSS3
+- Javascript
+- Python3
 
-## Release History
+### Libraries
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- jQuery 3.4.1
+- Dnspython 1.16.0
+- Flask 1.1.1
+- Flask-PyMongo 2.3.0
+- PyMongo 3.10.1
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Tools
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- MongoDB
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Hosting
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- Github
+- Heroku
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+<br/>
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## UI
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Colors, Fonts & Layout
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The overall layout of the page is aimed to be minimalistic in order to give the poems as much attention and real estate as possible.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- want to see if I can generate different colour poem cards - 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+Otherwise keep it simple grey to maintain the focus on poetry.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Responsiveness
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+The website has been built with a mobile-first approach and is highly responsive. The layout of poem cards changes over four different screen sizes, using the Materialize grid system
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+<br/>
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## UX
 
-------
+The use of icons containing popup descriptors was to improve the simplicity and user experience. The words of the poems need to be center stage, so additional words of instructions looked clunky. Simple creative icons, promoting an action were judged as the best way of promoting a good user experience.
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
+### User Stories
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- As a user, I want to be able to add my own poems to the database (Create)
+- As a user, I want to view the poems I have written (Read)
+- As a user, I want to be able to edit my poems. (Update)
+- As a user, I want to be able to delete poems. (Delete)
 
-**How will this affect me?**
+Future user stories/functions (TBA):
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- As a user, I want to create my own profile/login where I can store my own poems and protect them from being edited by others. (TBA)
+- As a user, I want to be able to comment on poems shared by others in the database. (TBA)
+- As a user, I want to be able to quickly share poems with my friends on social media. (TBA)
+- As a admin user I want to be able to edit and delete any poems in the database. (TBA)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+<br/>
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## Database
 
-**So….?**
+The database chosen for this is a non-relational database hosted on MongoDB.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+The application uses 1 database collections, 'poems'.
 
-**Can I opt out?**
+The basic information of each poem (title, text, date and author) is stored as a key value whilst the content of each key is stored as a string.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+<br/>
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Features
 
-**Anything more?**
+### Feature Overview
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- Users can add new poems to the database. (Create)
+- Users can browse through and view all poems contained in the database. (Read)
+- Users can edit poems in the database. (Update)
+- Users can delete poems in the database. (Delete)
 
----
+### Feature 1 - Add Poems (Create)
 
-Happy coding!
+**User story: "As a user, I want to be able to add poems to the database."**
+
+Users can easily add poems to the database by navigating to the 'create' pen icon in the top left corner of the page.
+
+This opens the 'create poem' page containing four main fields: Title, text, date written and 'written by'.   
+
+The **Title** field allows the user to add a name/title of the poem.
+
+The **text box** field allows the user to add the text of their poem.
+The field expands as more text is added.
+
+The **Date Written** field allows the user to enter a date when the poem was written.
+This opens a calendar with today's date highlighted. Users can select the date their poem was written and it is saved in a text format.
+
+### Feature 2 - Browse Poems (Read)
+
+**User story: "As a user, I want to browse through and view all poems contained in the database."**
+
+Poems are displayed in a grid format on the main page. They display a short summary, including the poem title and some content. An enlarge icon on each poem card prompts users to view the poem. It is then displayed in full when clicked. 
+
+### Feature 3 - Edit Poems (Update)
+
+**User story: "As a user, I want to be able to edit my poems."**
+
+Each poem card has the same create button used the header. This prompts users to be able to edit each poem. The existing content is displayed on the edit poem fields where it can be changed. Clicking save updates these changes to the website. If the changes do not want to be kept, the cancel button will return the user to the main page without any changes made. 
+
+## Feature 4 - Delete Poems (Delete)
+
+**User story: "As a user, I want to be able to delete poems. (Delete)"**
+
+Deleting a poem is possible from within the edit page. This is to avoid accidental deletes on the main page, where the full poems cannot be seen. Clicking delete removes the poem from the database and returns the user to the main page.
+
+### Features Left To Implement
+
+Going forward I would like to implement the following features:
+
+- Login feature: Enabling users to create an account and log in using their chosen credentials.
+- Restrict edit/delete: Only enabling logged in admins or logged in users to edit/delete poems.
+- Search feature: Allow users to change the order in the poems are displayed, which could be alphabetical, by when it was written, or the author's name.
+- Sharing feature: Create social share buttons for users to share poems on social media.
+- Rating feature: Enabling users to vote on poems.
+- Comment section: Enabling users to comment on shared poems.
+- Backend Validation: Add further backend validation to further add to defensive design, such as to check when the delete button is clicked.
+- Admin approval of new content, meaning a admin level user has to approve new poems before they become publicly available.
+
+<br/>
+
+## Testing
+
+### Manual Testing
+
+
+
+### Responsive design:
+
+
+
+### Screen Size Testing/Compability
+
+
+
+### Browser Compability
+
+Browser             | Version           | Comments
+--------------------|-------------------|---------
+Firefox             | 72.0.2 (64-bit)   | No errors observed
+Edge                | 44.18362.449.0    | No errors observed
+Chrome              | 80.0.3987.122     | No errors observed
+Opera               | 67.0.3575.31      | No errors observed
+
+### Navigation
+
+Navigation was kept simple with a fixed navbar at the page top in order to give the body as much real estate as possible.
+
+
+<br/>
+
+## Deployment
+
+
+
+**How to deploy to Github:**
+
+
+
+**How to clone this repository in order to run the code locally on your machine:**
+
+
+
+**How to deploy to Heroku using GitPod:**
+
+
+
+**Running the application locally using Gitpod:**
+
+
+
+<br/>
+
+## Credits
+
+### Content
+
+All of the text content on the website was written by me, Sam Petchey.
+
+
+### Acknowledgements
+
+A very big thank you goes to my Code Institute Mentor Brian M. for his invaluable support and guidance throughout this project.
+
+### Disclaimer
+
+The content of this website is for educational purposes only.
