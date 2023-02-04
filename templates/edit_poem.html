@@ -47,10 +47,11 @@
                             Cancel
                         </button>
                     </div>
+                <!-- delete poem button -->
                     <div>
-                        <button type="#" class="btn waves-effect waves-light grey darken-3 text-shadow">
+                        <a href="{{ url_for('delete_poem', poem_id=poem._id)}}" class="btn waves-effect waves-light grey darken-3 text-shadow">
                             Delete
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-app.secret_key = os.environ.get("SECRET_KEY")
+app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
@@ -50,7 +50,8 @@ def edit_poem(poem_id):
 
 @app.route("/delete_poem/<poem_id>")
 def delete_poem(poem_id):
-    mongo.db.poems.remove({"_id": ObjectId()})
+    mongo.db.poems.delete_one({"_id": ObjectId(poem_id)})
+    flash("Poem Successfully Deleted")
     return redirect(url_for("get_poems"))
 
 
