@@ -35,14 +35,24 @@ def create():
 @app.route("/edit_poem/<poem_id>", methods=["GET", "POST"])
 def edit_poem(poem_id):
     if request.method == "POST":
-        mongo.db.poems.update(poem_id, submit)
+        submit = {
+            "$set":
+             {"poem_title": request.form.get("poem-title"),
+            "poem_text": request.form.get("poem_text"),
+            "poem_author": request.form.get("poem_author"),
+            "date_added": request.form.get("date_added")}
+        }
+        mongo.db.poems.update_one({"_id": ObjectId(poem_id)}, submit)
+    
     poem = mongo.db.poems.find_one({"_id": ObjectId(poem_id)})
-    return render_template("edit_poem.html", poem=poem)
+    return render_template("edit_poem.html", poem=poem, poem_id=poem_id)
+
 
 @app.route("/delete_poem/<poem_id>")
 def delete_poem(poem_id):
     mongo.db.poems.remove({"_id": ObjectId()})
     return redirect(url_for("get_poems"))
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

@@ -4,7 +4,7 @@
     <h4 class="center-align">Edit poem...</h4>
 
     <div class="row">
-        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_poem', poem_id=poem.id) }}">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_poem', poem_id=poem._id) }}">
             <div class="card-panel">
                 <!-- poem title -->
                 <div class="row">
@@ -38,22 +38,19 @@
                 <!-- save poem button -->
                 <div class="row">
                     <div class="col s6 left">
-                        <a href="{{ url_for ('edit_poem') }}"
                         <button type="submit" class="btn waves-effect waves-light grey darken-3 text-shadow">
                             Save changes
-                        </button></a>
+                        </button>
                     </div class="col s6 right">
                     <div>
-                        <a href="{{ url_for('get_poems') }}"
-                        <button type="submit" class="btn waves-effect waves-light grey darken-3 text-shadow">
+                        <button type="#" class="btn waves-effect waves-light grey darken-3 text-shadow">
                             Cancel
-                        </button></a>
+                        </button>
                     </div>
                     <div>
-                        <a href="{{ url_for('delete_poem') }}"
-                        <button type="submit" class="btn waves-effect waves-light grey darken-3 text-shadow">
+                        <button type="#" class="btn waves-effect waves-light grey darken-3 text-shadow">
                             Delete
-                        </button></a>
+                        </button>
                     </div>
                 </div>
             </div>
