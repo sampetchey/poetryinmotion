@@ -37,12 +37,13 @@ def edit_poem(poem_id):
     if request.method == "POST":
         submit = {
             "$set":
-             {"poem_title": request.form.get("poem-title"),
+             {"poem_title": request.form.get("poem_title"),
             "poem_text": request.form.get("poem_text"),
             "poem_author": request.form.get("poem_author"),
             "date_added": request.form.get("date_added")}
         }
         mongo.db.poems.update_one({"_id": ObjectId(poem_id)}, submit)
+        return redirect(url_for('get_poems'))
     
     poem = mongo.db.poems.find_one({"_id": ObjectId(poem_id)})
     return render_template("edit_poem.html", poem=poem, poem_id=poem_id)

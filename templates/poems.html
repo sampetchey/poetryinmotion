@@ -12,8 +12,6 @@
                 <p>{{ poem.date_added }}</p>
             </div>
             <div class="card-action">
-                <a href="#"><i class="material-icons left white-text tooltipped" 
-                    data-position="bottom" data-tooltip="View poem">open_in_new</i></a>
                 <a href="{{ url_for('edit_poem', poem_id=poem._id)}}"><i class="material-icons right white-text tooltipped" 
                     data-position="bottom" data-tooltip="Edit poem">create</i></a>
             </div>
