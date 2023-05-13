@@ -37,9 +37,6 @@ https://flask-poetry-in-motion-project.herokuapp.com/
 
 <br/>
 
-## Wireframe Mockups
-
-
 ## Technologies
 
 ### Languages
@@ -80,7 +77,7 @@ Otherwise keep it simple grey to maintain the focus on poetry.
 
 ### Responsiveness
 
-The website has been built with a mobile-first approach and is highly responsive. The layout of poem cards changes over four different screen sizes, using the Materialize grid system
+The website has been built with a mobile-first approach and is highly responsive. The layout of poem cards changes over four different screen sizes, using the Materialize grid system.
 
 <br/>
 
@@ -177,14 +174,11 @@ Going forward I would like to implement the following features:
 
 ### Manual Testing
 
-
+The site has been tested using html and css validators. On deployment debug has been set to 'False'.
 
 ### Responsive design:
 
-
-
-### Screen Size Testing/Compability
-
+The website has been built with a mobile-first approach and is highly responsive. The layout of poem cards changes over four different screen sizes, using the Materialize grid system. This has been tested successfully on different browser/screen sizes.
 
 
 ### Browser Compability
@@ -199,31 +193,6 @@ Opera               | 67.0.3575.31      | No errors observed
 ### Navigation
 
 Navigation was kept simple with a fixed navbar at the page top in order to give the body as much real estate as possible.
-
-
-<br/>
-
-## Deployment
-
-
-
-**How to deploy to Github:**
-
-
-
-**How to clone this repository in order to run the code locally on your machine:**
-
-
-
-**How to deploy to Heroku using GitPod:**
-
-
-
-**Running the application locally using Gitpod:**
-
-
-
-<br/>
 
 ## Credits
 
