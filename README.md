@@ -6,7 +6,6 @@
 
 - General Information
 - Demo
-- Wireframe Mockups
 - Technologies
 - UI
 - UX
@@ -14,9 +13,7 @@
 - Accessibility
 - Challenges
 - Features
-- Defensive Design
 - Testing
-- Deployment
 - Credits
 
 <br/>
